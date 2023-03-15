@@ -1,0 +1,2391 @@
+#contacts-table{
+	width: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border: 1px solid #C3C3C8; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #C3C3C8; 
+  border-radius: 10px;
+  width: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7C7C7C; 
+}
+
+
+
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////         Login Page Start            /////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*Entire login-box*/
+#login-box{
+	color: #696868;
+	position: relative;
+	box-shadow: 45px 25px 80px -15px rgba(0, 0, 0, 0.45);
+
+	margin: 4% 12% 0% 12%;
+}
+
+
+/*Carousel for Column 1*/
+	/*Carousel Logo*/
+.overlay {
+ 	position: absolute;
+ 	left: 20%;
+ 	z-index: 1;
+ 	pointer-events: none;
+ }
+
+.logocarousel{
+	height: 200px;
+}
+
+	/*Carousel Image*/
+.carouselimage{
+	filter: blur(1px) brightness(40%);
+}
+
+
+
+	/*Caraousel caption*/
+.carousel-caption{
+    margin-bottom: 35%;
+}
+
+	/*Carouse button*/
+.button1, .button2, .button3{
+	margin: 4px 0px;
+	padding: 6px 20px;
+
+	border: none;
+	border-radius: 4px;
+}
+
+.button1{
+	background-color: #f27c38;
+}
+
+.button2{
+	background-color: red;
+}
+
+.button3{
+	background-color: #f27c38;
+}
+
+
+
+/* Login for Column 2*/
+	/*Form*/
+.login-form{
+	padding-top: 19%;
+}
+
+	/*Form logo*/
+.logo{
+	display: block;
+	height: 70px;
+
+  	margin-left: auto;
+ 	margin-right: auto;
+	
+}
+
+/*Form header text*/
+.login-form h5{
+	text-align: center;
+	font-size: 12px;
+}
+
+	/*Form input boxes*/
+.form-input{
+	padding-left: 25%;	
+}
+
+#username, #password{
+	text-align: left;
+	font-weight: normal;
+}
+
+#textbox{
+	width: 65%;
+	outline: none;
+	border: 1px solid #a8a7a7;
+	border-radius: 2px;
+}
+
+
+	/*Form login button*/
+.buttonlogin{
+	background-color: #28b2ec;
+	color: white;
+	border: none;
+	border-radius: 2px;
+	outline: none;
+
+	padding: 6px 25px;
+	margin: 4px 0px;
+	
+}
+.buttonlogin:hover{
+	background-color: #007db2;
+	transition: .5s;
+}
+
+
+	/*Form remember me*/
+#rememberMe{
+	height: 10px;
+}
+
+#span-rememberme{
+	color: #aab0b7;
+	font-size: 11px;
+	margin-left: 3px;
+}
+
+	/*Form forgot password*/
+#span-forgotpass{
+	font-size: 11px;
+	padding-left: 21%;
+}
+
+	/*footer position*/
+.footer{
+	position: relative;
+	font-size: 11px;
+	width: 100%;
+
+	margin-top: 30%;	
+}
+
+	/*Footer information*/
+#footer-span{
+	color: 	#aab0b7;
+	padding-left: 41%;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////           Login Page End             ////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////           main layout Start           ////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*.......Main header.........*/
+.mainboard .header-container nav{
+	background-color: #263649;
+	top: 0;
+	width: 100%;
+	position: fixed;
+
+    padding: 0 55px;
+}
+
+	/*header image*/
+.mainboard .header-container nav img{
+	height: 40px;
+    margin-top: 5px;
+}
+
+.mainboard .header-container nav .nav_userinfo{
+	height: 50px;
+	width: 80px;
+	float: right;
+	color: white;
+
+	padding-top: 5px;
+}
+.mainboard .header-container nav .nav_userinfo .nav_userinfo_name{
+	font-size: 13px;
+	font-weight: bold;
+}
+.mainboard .header-container nav .nav_userinfo .nav_userinfo_status{
+	font-size: 10px;
+}
+
+.mainboard .header-container nav .nav_usericon, .nav_noti{
+	color: white;
+	float: right;
+	text-align: center;
+	font-size: 35px;
+	height: 50px;
+	width: 60px;
+
+	padding-bottom: 10px;
+}
+
+.mainboard .header-container nav .nav_noti{
+	font-size: 25px;
+	padding-top: 10px;
+	cursor: pointer;
+} 
+
+.mainboard .header-container nav .nav_usericon .fa-user-circle{
+	cursor: pointer;
+	border: 3px solid green;
+	border-radius: 50%;
+}
+
+
+	/*......For Popup In the Navbar...........*/
+	/*...For user...*/
+.user_pop {
+  visibility: hidden;
+  color: black;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal; 
+
+  text-align: center;
+  position: absolute;
+  width: 82px;
+  border-radius: 2px;
+  border: 1px solid #a8a7a7;
+  box-shadow: 1px 2px 22px -1px rgba(0, 0, 0, 0.30);
+
+  padding: 5px 0;
+}
+
+.user_pop::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  border: 6px solid #a8a7a7;;
+  border-color: transparent transparent #dad6d6 transparent;
+
+  margin-left: -5px;
+}
+
+.nav_usericon:hover .user_pop{
+  visibility: visible;
+  animation: fadein .5s;
+}
+.nav_usericon .usertext{
+  top: 94%;
+  right: 8%;
+}
+.user_pop a{
+	text-decoration: none;
+	display: block;
+	font-size: 12px;
+	float: left;
+	width: 100%;
+
+	padding: 3px 10px;
+}
+.user_pop a:hover{
+	background-color: #e8e0e0;
+	transition: .3s;
+}
+
+
+	/*...For user...*/
+.nav_noti:hover .user_pop{
+  visibility: visible;
+  animation: fadein .5s;
+}
+.nav_noti .notitext{
+  top: 94%;
+  right: 12%;
+}
+
+
+
+
+
+
+/*.......Main sidebar.........*/
+	/*Sidebar container*/
+.sidebar-container nav{
+	background-color: #242424;
+    position: fixed;
+    top: 50px;
+	height: 100%;
+    width: 62px;
+    z-index: 1;
+}
+.sidebar-container nav a{
+	text-decoration: none;
+}
+
+	/*..Sidebar nav divs..*/
+.sidebar-container nav div{
+	color: white;
+	text-align: center;
+	height: 60px;
+	cursor: pointer;
+}
+
+.sidebar-container nav div:hover{
+	background-color: #475BAE;
+	transition: 0.4s;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.activated{
+  background-color: #475BAE;
+  color: white;
+}
+
+.sidebar-container nav div i{
+	font-size: 20px;
+	margin: 12px 0 -10px 0;
+}
+
+.sidebar-container nav div h5{
+	font-size: 10px;
+	margin-top: 3px;
+}
+
+
+
+/*Callbook that appears on click*/
+.sidebar-container .callbook-block{
+	background-color: white;
+	display: none;
+	z-index: 1;
+	height: 200px;
+	width: 250px;
+	border-radius: 0 5px 5px 5px;
+	box-shadow: 1px 2px 22px -1px rgba(0, 0, 0, 0.70);
+	animation: fadein 0.5s;
+
+	margin: -90px 0 0 55px;
+}
+
+@keyframes fadein{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+.sidebar-container .callbook-block:hover{
+	background-color: white;
+}
+
+	/*......Inside Callblock........*/
+.sidebar-container .callbook-block span{
+	color: #CCCCCC;
+	float: right;
+	font-size: 16px;
+  	font-weight: bold;
+
+  	padding: 10px 10px 0 0;
+}
+
+.sidebar-container .callbook-block span:hover{
+	color: red;
+}
+
+	/*Callbook header*/
+.sidebar-container .callbook-block .callbook-header{
+	color: #242424;
+	text-align: left;
+	height: 40px;
+	width: 90%;
+
+	padding: 3px 0 0 10px;
+}
+
+.sidebar-container .callbook-block .callbook-header:hover{
+	background-color: white;
+}
+
+.sidebar-container .callbook-block .callbook-header h5{
+	color: #5C5A5A;
+	margin-top: -10px;
+}
+
+
+	/*Callbook items*/
+.sidebar-container .callbook-block .callbook-items{
+	float: left;
+	color: #242424;
+	align-items: center;
+	margin: 5px 5px 0 5px;
+	height: 55px;
+	width: 73px;
+}
+
+.sidebar-container .callbook-block .callbook-items:hover{
+	background-color: #cccccc;
+}
+
+	/*Callbook View all button*/
+.sidebar-container .callbook-block button{
+	background-color: #8FA2EF;
+	font-size: 12px;
+	border: none;
+	border-radius: 3px;
+
+	padding: 3px 3px;
+	margin-top: 10px;
+}
+
+.sidebar-container .callbook-block button:hover{
+	background-color: #0b7dda;
+}
+
+
+
+
+
+
+
+/*.......Main status bar.........*/
+.statusbar-container nav{
+	background-color: white;
+	height: 30px;
+	border-bottom: 1px solid #a8a7a7;
+
+	margin: 50px 0 0 62px;
+}
+
+.statusbar-container nav ul{
+	float: right;
+	padding-top: 5px;
+}
+
+.statusbar-container nav ul li{
+	display: inline-block;
+	font-size: 12px;
+}
+
+.statusbar-container nav ul li #active{
+	color: #CCCCCC;
+}
+
+.statusbar-container nav .connection_status{
+	margin-right: 60px;
+}
+
+	/*for toggle switch for status*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 15px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+
+  top: 3px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  background-color: white;
+
+  height: 7px;
+  width: 7px;
+  left: 3px;
+  bottom: 2px;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(10px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+
+/*.......Main Footer.........*/
+#footer-container{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding-top: 2px;
+}
+
+#footer-container ul{
+	text-align: right;
+	float: right;
+	list-style: none;
+}
+
+#footer-container ul li{
+	color: #b2b7bf;
+	font-size: 10px;
+
+	padding-right: 10px;
+}
+
+#footer-container ul span{
+	color: #959aa1;
+	font-weight: bold;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////           Main Layout End           ////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////           Contacts Page Start           ////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*......main Contacts body..........*/
+.contacts-body{
+	margin: -11px 0 0 62px;
+	animation: fadein 1.5s;
+}
+
+/*.........Contacts Header.........*/
+.contacts-body .contacts-header #contacts{
+	color: #192533;
+	padding: 10px 0 0 10px;
+}
+
+
+/*.........Contacts Box.........*/
+.contacts-body .contacts-box{
+	/*height: 68vh;*/
+	color: #333333;
+	background-color: white;
+	border: 1px solid #a8a7a7;
+	border-radius: 5px;
+	box-shadow: 10px 11px 22px -1px rgba(0, 0, 0, 0.20);
+
+	margin: 0px 10px 0 10px;
+}
+
+
+
+/*........Contacts box menu........*/
+.contacts-body .contacts-menu{
+	height: 45px;
+	margin: 0 30px;
+}
+
+	/*left menu*/
+.contacts-body .contacts-menu h4{
+	float: left;
+	color: #263649;
+
+	padding: 10px 0 0 0px;
+}
+
+.contacts-body .contacts-menu input{
+	color: #263649;
+	border: 1px solid #263649;
+	border-radius: 5px;
+	outline: none;
+
+	margin: 15px 0 0 5px;
+}
+
+.contacts-body .contacts-menu .fa-search{
+	color: #263649;
+	margin-left: 30px;
+}
+
+
+	/*right menu*/
+.contacts-body .contacts-menu .contact-download{
+	float: right;
+	color: #263649;
+	cursor: pointer;
+
+	padding: 10px 20px 0 0;
+}
+
+.contacts-body .contacts-menu .contact-download ul{
+	list-style: none;
+	margin-right: -10px;
+}
+
+.contacts-body .contacts-menu .contact-download ul li{
+	display: inline-block;
+}
+
+.contacts-body .contacts-menu .contact-upload{
+	float: right;
+	color: #263649;
+
+	padding-top: 10px;
+}
+
+.contacts-body .contacts-menu .contact-upload ul{
+	list-style: none;
+	cursor: pointer;
+}
+
+.contacts-body .contacts-menu .contact-upload ul li{
+	display: inline-block;
+}
+
+/*.........create contact button.........
+.contacts-box .create-contact{
+	color: white;
+	background-color: #263649;
+	font-size: 12px;
+	border: none;
+	border-radius: 5px;
+
+	margin-right: 35px;
+	padding: 5px 10px;
+}*/
+
+
+/*...........Contacts box table...........*/
+.contacts-body .contacts-table{
+	color: #333333;
+	margin: 0 30px;
+	padding-top: 10px;
+}
+
+.contacts-table-tbody{
+   overflow-y:scroll;
+   display:block;
+   width: 100%;
+   font-size: 12px;
+   height: 500px;
+}
+
+.contacts-body .contacts-table th{
+	text-align: center;
+	width: 2%;
+	border-bottom: 1px solid #adb2ba;
+	
+	padding: 5px 0;
+}
+
+.contacts-body .contacts-table td{
+	text-align: center;
+	border-bottom: 1px solid #adb2ba;
+
+	padding: 5px 0;
+}
+.contacts-body .contacts-table td:hover{
+	background-color: #E0D7D7;
+}
+
+
+		/*.....Popup.......*/
+.contacts-body .contacts-table .popuptext ul{
+	list-style: none;
+	float: left;
+
+	padding: 0 0 0 15px;
+}	
+
+.contacts-body .contacts-table .popuptext ul li{
+	color: #9aa1aa;
+}
+
+.contacts-body .contacts-table .popuptext ul li .fa-eye{
+	color: #8fa2ef;
+}
+
+.contacts-body .contacts-table .popuptext ul li .fa-ban{
+	color: #f16060;
+}
+
+
+
+
+/*/////////////////for popup controls///////////////*/
+.contact_pop{
+  position: relative;
+  cursor: pointer;
+}
+
+/* The actual popup */
+.contact_pop .popuptext {
+  visibility: hidden;
+  position: absolute;
+  background-color: white;
+  text-align: left;
+
+  left: 50%;
+  top: 0%;
+  width: 90px;
+  border-radius: 6px;
+  
+  z-index: 1;
+  padding: 10px 0 0 0;
+}
+
+/* Toggle this class - hide and show the popup */
+.contact_pop .show {
+  visibility: visible;
+  animation: fadeIn 0.3s;
+  box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.40);
+}
+
+/* Add animation (fade in the popup) */
+@keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+} 
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////           Contacts Page End           ////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////           Activity Page Start           ////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*............activityboard Start........*/
+.activity-body{
+	margin: -11px 0 0 62px;
+	animation: fadein 1.5s;
+}
+
+/*......activity Page header......*/
+#activity{
+	color: #192533;
+	padding: 10px 0 0 10px;
+}
+
+.activity-body .call-logs, .chat, .script{
+	color: #333333;
+	float: left;
+	height: 570px;
+	border-radius: 3px;
+
+	margin: 0 0 0 10px;
+}
+
+
+/*........1st div for Call Logs.......*/
+.activity-body .call-logs{
+	width: 15%;
+}
+
+
+.taskbtn{
+  background-color: #f1f1f1;
+  font-size: 10px;
+  float: right;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 2px;
+  cursor: pointer;
+
+  padding: 2px 5px;
+  margin: 8px 5px 0 0;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.act, .taskbtn:hover {
+  background-color: grey;
+  color: white;
+  box-shadow: -5px 3px 5px -1px rgba(0, 0, 0, 0.30);
+}
+
+
+
+	/*...inside Call logs div...*/
+	/*...All Calls...*/
+.activity-body .call-logs .all-calls{
+	background-color: white;
+	height: 50%;
+	border: 1px solid #a8a7a7;
+	border-radius: 3px;
+	box-shadow: 10px 11px 22px -1px rgba(0, 0, 0, 0.20);
+
+	padding: 1px 0 0 5px;
+}
+
+.activity-body .call-logs input{
+	width: 98%;
+	outline: none;
+	border: 1px solid #C3C3C8;
+	border-radius: 2px;
+}
+
+		/*...All calls Body Scroll...*/
+.activity-body .call-logs .all-calls-scroll{
+	/*background-color: #f7f5f5;*/
+	height: 70%;
+	/*border-radius: 10px;*/
+	overflow-y: scroll;
+	animation: fadein 0.8s;
+
+	margin: 5px 5px 0 0;
+}
+
+	/*...Inside All calls Body Scroll...*/
+		/*...Caller Info...*/
+.activity-body .call-logs .all-calls .all-calls-scroll .all-calls-info{
+	height: 50px;
+	border-bottom: 1px solid #CCCCCC;
+	cursor: pointer;
+
+	margin: -1px 0 0 0;
+}
+
+.activity-body .call-logs .all-calls .all-calls-scroll .all-calls-info:hover{
+	background-color: #E0D7D7;
+	transition: .2s;
+}
+
+
+		/*...Caller Info Icon...*/
+.all-calls-info i{
+	font-size: 35px;
+	float: left;
+	padding: 5px 0 0 5px;
+}
+
+		/*///...Inside Caller Info...///*/
+.all-calls-info .all-calls-info2{
+	border: 1px;
+	height: 45px;
+
+	margin: 1px 2px 0 40px;
+}
+
+.all-calls-info .all-calls-info2 h4{
+	font-size: 14px;
+
+	padding: 10px 0 0 5px;
+	margin: 0 0 -10px 0;
+}
+
+.all-calls-info .all-calls-info2 h5{
+	font-size: 10px;
+
+	padding-left: 5px;
+}
+
+
+
+	/*...2nd block - past tasks...*/
+/*...past tasks Body Scroll...*/
+.activity-body .call-logs .past-tasks{
+	/*background-color: #f7f5f5;*/
+	height: 70%;
+	/*border-radius: 10px;*/
+	overflow-y: scroll;
+	display: none;
+	animation: fadein 0.8s;
+
+	margin: 5px 5px 0 0;
+}
+
+	/*...Inside past tasks Body Scroll...*/
+		/*...Caller Info...*/
+.activity-body .call-logs .all-calls .past-tasks .past-tasks-info{
+	height: 50px;
+	border-bottom: 1px solid #CCCCCC;
+	cursor: pointer;
+
+	margin: -1px 0 0 0;
+}
+
+.activity-body .call-logs .all-calls .past-tasks .past-tasks-info:hover{
+	background-color: #E0D7D7;
+	transition: .2s;
+}
+
+
+		/*...Caller Info Icon...*/
+.past-tasks-info i{
+	font-size: 35px;
+	float: left;
+	padding: 5px 0 0 5px;
+}
+
+		/*///...Inside Caller Info...///*/
+.past-tasks-info .past-tasks-info2{
+	border: 1px;
+	height: 45px;
+
+	margin: 1px 2px 0 40px;
+}
+
+.past-tasks-info .past-tasks-info2 h4{
+	font-size: 14px;
+
+	padding: 10px 0 0 5px;
+	margin: 0 0 -10px 0;
+}
+
+.past-tasks-info .past-tasks-info2 h5{
+	font-size: 10px;
+
+	padding-left: 5px;
+}
+
+
+
+
+
+
+
+	/*....Missed Calls...*/
+.activity-body .call-logs .missed-calls{
+	background-color: white;
+	height: 50%;
+	border: 1px solid #a8a7a7;
+	border-radius: 3px;
+	box-shadow: 10px 11px 22px -1px rgba(0, 0, 0, 0.20);
+
+	padding: 1px 0 0 5px;
+	margin-top: 5px;
+}
+		/*...Missed calls Body Scroll...*/
+.activity-body .call-logs .missed-calls-scroll{
+	/*background-color: #f7f5f5;*/
+	height: 70%;
+	/*border-radius: 10px;*/
+	overflow-y: scroll;
+
+	margin: 5px 5px 0 0;
+}
+
+
+/*...Inside Missed calls Body Scroll...*/
+		/*...Caller Info...*/
+.activity-body .call-logs .missed-calls .missed-calls-scroll .missed-calls-info{
+	height: 50px;
+	border-bottom: 1px solid #CCCCCC;
+	cursor: pointer;
+
+	margin: 0;
+}
+
+.activity-body .call-logs .missed-calls .missed-calls-scroll .missed-calls-info:hover{
+	background-color: #E0D7D7;
+	transition: .2s;
+}
+
+		/*...Caller Info Icon...*/
+.missed-calls-info img{
+	padding: 10px 0 0 5px;
+}
+
+		/*...Inside Caller Info...*/
+.missed-calls-info .missed-calls-info2{
+	height: 45px;
+
+	margin: -50px 2px 0 40px;
+}
+
+.missed-calls-info .missed-calls-info2 h4{
+	font-size: 14px;
+
+	padding: 20px 0 0 5px;
+	margin: 0 0 -10px 0;
+}
+
+.missed-calls-info .missed-calls-info2 h5{
+	font-size: 10px;
+
+	padding-left: 5px;
+}
+
+
+
+
+
+
+/*..........2nd div for Chat.........*/
+.activity-body .chat{
+	width: 41%;
+}
+
+	/*...inside Chat div...*/
+	/*...Chat head...*/
+.activity-body .chat .chat-head{
+	background-color: white;
+	height: 10%;
+	border: 1px solid #a8a7a7;
+	border-radius: 3px;
+	box-shadow: 10px 11px 22px -1px rgba(0, 0, 0, 0.20);
+
+	padding: 15px 0 0 30px;
+}
+
+.activity-body .chat .chat-head i{
+	font-size: 20px;
+}
+
+.activity-body .chat .chat-head span{
+	font-size: 18px;
+	padding: 0 0 0 5px;
+}
+
+.activity-body .chat .chat-head .fa-sticky-note{
+	float: right;
+	margin-right: 30px;
+	cursor: pointer;
+}
+
+.activity-body .chat .chat-head .fa-sticky-note:hover{
+	color: #8FA2EF;
+	font-size: 20px;
+	transition: 0.2s;
+}
+
+
+	
+	/*....Pop Up for User Setting*/
+.chat-head .user-setting{
+	background-color: white;
+	position: fixed;
+	display: none;
+	left: 50%;
+	height: 300px;
+	width: 250px;
+	border-radius: 5px;
+	border: 1px solid #a8a7a7;
+	box-shadow: 1px 2px 22px -1px rgba(0, 0, 0, 0.30);
+
+	animation: fadein 0.4s;
+}
+
+.chat-head .user-setting .usersettingclose{
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+
+	margin: 10px 15px 0 0;
+	opacity: 0.8;
+}
+
+.chat-head .user-setting .usersettingclose:hover{
+	color: red;
+	transition: .5s;
+}
+
+
+
+	/*...Chat Body...*/
+.activity-body .chat .chat-body{
+	background-color: white;
+	height: 90%;
+	border: 1px solid #a8a7a7;
+	border-radius: 3px;
+	box-shadow: 10px 11px 22px -1px rgba(0, 0, 0, 0.20);
+
+	padding-top: 10px;
+	margin-top: 5px;
+}
+
+	/*...Inside Chat Body...*/
+	/*...Chat Body Scroll...*/
+.activity-body .chat .chat-body-scroll{
+	color: #5c5a5a;
+	height: 85%;
+	/*border-radius: 10px;*/
+	overflow-y: scroll;
+
+	margin: 0 5px;
+}
+
+	/*...Chat Body Input...*/
+.activity-body .chat .chat-input{
+	height: 15%;
+	border-radius: 10px;
+}
+
+.chat-input input{
+	float: left;
+	background: #f7f5f5;
+	width: 70%;
+	outline: none;
+	border: 1px solid #a8a7a7;
+	border-radius: 2px;
+
+	padding: 10px;
+	margin: 15px 0 0 20px;
+}
+
+.chat-input button {
+	background: #8FA2EF;
+    outline: none;
+    color: white;
+	float: left;
+	width: 20%;
+	cursor: pointer;
+    border: none;
+    border-radius: 2px;
+
+	padding: 10px;
+	margin: 15px 0 0 10px;
+}
+
+.chat-input button:hover {
+  	background: #0b7dda;
+}
+
+
+
+
+
+
+/*........3rd div for Script.......*/
+.activity-body .script{
+	width: 41%;
+}
+
+	/*...inside Script div...*/
+	/*...Script head...*/
+.activity-body .script .script-head{
+	background-color: white;
+	height: 10%;
+	font-size: 18px;
+	border: 1px solid #a8a7a7;
+	border-radius: 3px;
+	box-shadow: 10px 11px 22px -1px rgba(0, 0, 0, 0.20);
+
+	padding: 15px 0 0 30px;
+}
+
+.activity-body .script .script-head span{
+	padding: 0 0 0 5px;
+}
+	
+	/*...Script body...*/
+.activity-body .script .script-body{
+	background-color: white;
+	height: 90%;
+	border: 1px solid #a8a7a7;
+	border-radius: 3px;
+	box-shadow: 10px 11px 22px -1px rgba(0, 0, 0, 0.20);
+
+	padding-top: 10px;
+	margin-top: 5px;
+}
+
+	/*...Notes body scroll...*/
+.activity-body .script .script-body-scroll, .notes-body-scroll{
+	height: 95%;
+	/*border-radius: 10px;*/
+	overflow-y: scroll;
+	animation: fadein 0.8s;
+
+	margin: 0 5px;
+}
+
+
+	/*.....Inside Script Body Scroll - Different Scripts......*/
+.script-body-scroll .script_buttons{
+	text-align: center;	
+	animation: fadein 0.8s;
+}
+
+.script-body-scroll .script_buttons p{
+	border: 1px solid #a2b2f2;
+	border-radius: 3px;
+	cursor: pointer;
+
+	padding: 5px 0;
+	margin: 5px 10px;
+}
+
+.script-body-scroll .script_buttons input{
+	outline: none;
+	border: 1px solid #a8a7a7;
+	border-radius: 2px;
+	width: 50%;
+}
+.script-body-scroll .script_buttons button{
+	padding: 3px 5px 4px 5px;
+}
+
+.script-body-scroll .script_buttons p:hover{
+	background-color: #a2b2f2;
+	color: white;
+	transition: .4s;
+}
+
+.script-body-scroll .script1{
+	text-align: center;
+	display: none;
+
+	animation: fadein 0.8s;
+}
+
+.button_scriptreturn{
+	background-color: transparent;
+	position: fixed;
+	right: 35%;
+	cursor: pointer;
+
+	opacity: 0.4;
+}
+
+.button_scriptreturn:hover{
+	opacity: 1;
+	transition: 0.4s;
+}
+
+
+.script-body-scroll .script2{
+	text-align: center;
+	display: none;	
+	z-index: 1;
+
+	animation: fadein 0.8s;
+}
+
+
+
+/*...Notes body scroll...*/
+.activity-body .script .notes-body-scroll{
+	display: none;
+}
+
+@keyframes{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+
+
+
+
+
+
+
+/*.............................................................................*/
+/*.....Floating buttons on Script Head.....*/
+.floating_topicons{
+	width: 11%;
+	height: 50px;
+	z-index: 1;
+	position: fixed;
+	left: 86%;
+	top: 16%;
+	padding: 10px;
+}
+
+.floating_topicons i{
+	font-size: 18px;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .3s;
+
+	padding: 3px 5px;
+	margin-right: 5px;
+}
+
+.floating_topicons .fa-clipboard{
+	border: 2px solid #b8c4f3;
+	color: #b8c4f3; 
+}
+.floating_topicons .fa-clipboard:hover, .fa-clipboard:active{
+	border: 2px solid #6374b9;
+	color: #6374b9; 
+}
+
+
+.floating_topicons .fa-sticky-note{
+	border: 2px solid #b2c67f;
+	color: #b2c67f; 
+}
+.floating_topicons .fa-sticky-note:hover{
+	border: 2px solid #768747;
+	color: #768747; 
+}
+
+
+.floating_topicons .fa-calendar-alt{
+	border: 2px solid #ff9b91;
+	color: #ff9b91; 
+}
+.floating_topicons .fa-calendar-alt:hover{
+	border: 2px solid #c7584d;
+	color: #c7584d; 
+}
+
+
+.floating_topicons .fa-calculator{
+	border: 2px solid #dad6d6;
+	color: #dad6d6; 
+}
+.floating_topicons .fa-calculator:hover{
+	border: 2px solid #7f7b7b;
+	color: #7f7b7b; 
+}
+
+
+
+/*...........Pop up Text on icon hover.............*/
+.tooltiptext {
+  visibility: hidden;
+  color: #fff;
+  background-color: #555;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal; 
+
+  text-align: center;
+  position: absolute;
+  width: 75px;
+  border-radius: 6px;
+
+  padding: 5px 0;
+}
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  border: 5px solid;
+  border-color: transparent transparent #555 transparent;
+
+  margin-left: -5px;
+}
+
+	/*...For Scripts...*/
+.fa-clipboard:hover .tooltiptext{
+  visibility: visible;
+  animation: fadein .5s;
+}
+.fa-clipboard .scripttext{
+  top: 85%;
+  right: 64%;
+}
+
+
+	/*...For Notes...*/
+.fa-sticky-note:hover .tooltiptext{
+  visibility: visible;
+  animation: fadein .5s;
+}
+.fa-sticky-note .notetext{
+  top: 85%;
+  right: 42%;
+}
+
+
+	/*...For Calendar..*/
+.fa-calendar-alt:hover .tooltiptext{
+  visibility: visible;
+  animation: fadein .5s;
+}
+.fa-calendar-alt .calendartext{
+  top: 85%;
+  right: 19%;
+}
+
+
+	/*...For Calculator...*/
+.fa-calculator:hover .tooltiptext{
+  visibility: visible;
+  animation: fadein .5s;
+}
+.fa-calculator .calculatortext{
+  top: 85%;
+  right: -3%;
+}
+
+
+
+
+/*...........Calendar and Calculator Pop.............*/
+/*....Pop Up for Calendar*/
+.script .calendarpop {
+	background-color: white;
+	position: fixed;
+	top: 25%;
+	display: none;
+	left: 63%;
+	height: 300px;
+	width: 250px;
+	border-radius: 5px;
+	border: 1px solid #a8a7a7;
+	box-shadow: 1px 2px 22px -1px rgba(0, 0, 0, 0.30);
+
+	animation: fadein 0.4s;
+}
+
+.script .calendarpop .calendarclose{
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+
+	margin: 10px 15px 0 0;
+	opacity: 0.8;
+}
+
+.script .calendarpop .calendarclose:hover{
+	color: red;
+	transition: .5s;
+}
+
+
+/*....Pop Up for Calculator*/
+.script .calculatorpop{
+	background-color: white;
+	position: fixed;
+	top: 25%;
+	display: none;
+	left: 80%;
+	height: 300px;
+	width: 250px;
+	border-radius: 5px;
+	border: 1px solid #a8a7a7;
+	box-shadow: 1px 2px 22px -1px rgba(0, 0, 0, 0.30);
+	z-index: 1;
+
+	animation: fadein 0.4s;
+}
+
+.script .calculatorpop .calculatorclose{
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+
+	margin: 10px 15px 0 0;
+	opacity: 0.8;
+}
+
+.script .calculatorpopp .calendarclose:hover{
+	color: red;
+	transition: .5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*.............................................*/
+/*.....Button to trigger the modal......*/
+.activitybutton{
+	color: #567291;
+	text-align: center;
+	font-size: 15px;
+	height: 27px;
+	width: 27px;
+	right: 1.5%;
+	top: 17.4%;
+	position: fixed;
+	border: 2px solid #567291;
+	border-radius: 3px;
+
+	padding-top: 3px;
+}
+
+.activitybutton:hover{
+	background-color: #567291;
+	color: white;
+	transition: .4s;
+}
+
+	/*.....Text popup on activity button hover......*/
+.activitybutton:hover .tooltiptext{
+  visibility: visible;
+  animation: fadein .5s;
+}
+.activitybutton .activitytext{
+  top: 125%;
+  right: -108%;
+}
+
+
+@keyframes fadein{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+
+/*.....The Modal (background)..........*/
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;  
+  background: rgba(0,0,0, 0.2); /* Black w/ opacity */
+  animation: fadein 0.5s;
+
+  padding-top: 45px; /* Location of the box */
+}
+
+
+/* Modal Content */
+.modal .modal-content{
+  background: transparent;
+  float: right;
+  width: 25%;
+  height: 220px;
+  border: none;
+  box-shadow: none; 
+
+  padding: 20px;
+}
+
+/* The Close Button */
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+	/*......Divs inside the modal......*/
+.modal-content .call-orders, .call-details, .call-activity{
+	height: 90%;
+	width: 295px;
+	border-radius: 5px;
+	box-shadow: 1px 2px 22px -1px rgba(0, 0, 0, 0.20);
+
+	margin-top: 15px; 
+}
+
+
+	/*....1st block for call-orders....*/
+.modal-content .call-orders{
+	background-color: #839d3d;
+	color: white;
+}
+
+	/*//....Inside call-orders....//*/
+.modal-content .call-orders .call-orders-head{
+	height: 20%;
+	text-align: center;
+
+	padding: 1px 0 0 5px;
+}
+
+.modal-content .call-orders .call-orders-left, .call-orders-right{
+	float: left;
+	text-align: center;
+	height: 80%;
+	width: 147px;
+
+	padding-top: 20px;
+}
+
+.call-orders-right .fa-chart-bar{
+	font-size: 90px;
+	margin-top: -6px;
+}
+
+
+	/*....2nd block for call-details....*/
+.modal-content .call-details{
+	background-color: #bb4c40;
+	color: white;
+}
+
+	/*//....Inside call-details....//*/
+.modal-content .call-details .call-details-head{
+	height: 20%;
+	text-align: center;
+
+	padding: 1px 0 0 5px;
+}
+
+.modal-content .call-details .call-details-left, .call-details-right{
+	float: left;
+	text-align: center;
+	height: 80%;
+	width: 147px;
+
+	padding-top: 20px;
+}
+
+
+	/*....3rd block for call-activity....*/
+.modal-content .call-activity{
+	background-color: #3689d3;
+	color: white;
+}
+
+	/*//....Inside call-activity....//*/
+.modal-content .call-activity .call-activity-head{
+	height: 20%;
+	text-align: center;
+
+	padding: 1px 0 0 5px;
+}
+
+.modal-content .call-activity .call-activity-left, .call-activity-right{
+	float: left;
+	text-align: center;
+	height: 80%;
+	width: 147px;
+
+	padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*........4th div for Menu.......
+.activity-body .menu{
+	display: none;
+	background-color: white;
+	float: left;
+	border-radius: 3px;
+
+	margin: 5px 0 0 10px;
+	color: #5c5a5a;
+	width: 10%;
+	height: 575px;
+	text-align: center;
+	box-shadow: 1px 2px 22px -1px rgba(0, 0, 0, 0.30);
+
+	padding-top: 10px;
+}
+
+.activity-body .menu .menu-icons ul{
+	list-style: none;
+	font-size: 20px;
+	color: #8FA2EF;
+
+	margin: 20px 0 0 -15px;
+}
+
+.activity-body .menu .menu-icons ul li{
+	float: left;
+	cursor: pointer;
+
+	padding-top: 15px;
+}
+
+.activity-body .menu .menu-icons ul li span{
+	font-size: 15px;
+	color: #757B86;
+
+	padding-left: 5px;
+}
+
+
+.activity-body .all-calls, .missed-calls, .chat-head, .chat-body, .script-head, .script-body{
+	box-shadow: 1px 2px 22px -1px rgba(0, 0, 0, 0.20);
+}*/
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////           Activity Page Start           ////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////           Wallboard Page Start           ////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*........Main wallboard body........*/
+.wallboard-body{
+	color: #333333;
+	animation: fadein 1.5s;
+}
+.wallboard-body h4{
+	padding-top: 5px;
+}
+
+/*....Navbar for wallboard*/
+.wallboard-header nav{
+	background-color: #d9eded;
+	height: 35px;
+	border: 1px solid #a8a7a7;
+	border-radius: 3px;
+	box-shadow: 10px 8px 22px -1px rgba(0, 0, 0, 0.15);
+
+	padding: 0 20px;
+	margin: 10px 10px 0 10px;
+}
+
+.wallboard-header nav p{ float: right;}
+
+.wallboard-header nav h6{ 
+	opacity: .5;
+	padding-left: 45%;
+}
+
+.wallboard-header nav label{
+	padding-top: 5px;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+
+	/*...toggle switch in the navbar...*/
+.inoutbtn{
+  background-color: #f1f1f1;
+  font-size: 12px;
+  float: left;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 50px;
+  cursor: pointer;
+
+  padding: 3px 6px;
+  margin: 4px 5px 0 0;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.acti, .inoutbtn:hover {
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 5px 3px 4px -1px rgba(0, 0, 0, 0.30);
+  transition: 0.4s;
+}
+
+
+
+
+/*............wallbody blocks..............*/
+/*....Agent Status......*/
+.agent-status{
+	text-align: center;
+	float: left;
+	height: 255px;
+	width: 40%;
+	border-radius: 5px;
+
+	margin: 10px 0 0 10px;
+}
+
+	/*....Inside Agent Status......*/
+.agent-status .agent-status-banner{
+	color: white;
+	height: 85px;
+	width: 90%;
+	background-image: linear-gradient(to right, #263649, #FF7364);
+	border-radius: 2px;
+	box-shadow: 15px 10px 20px -5px rgba(0, 0, 0, 0.50);
+
+	margin: -7px 30px;
+}
+
+.agent-status h4{
+	padding-top: 5px;
+}
+
+.agent-status .agent-online, .agent-offline, .agent-oncall, .agent-idle{
+	text-align: center;
+	float: left;
+	height: 40%;
+	width: 22%;
+	border-radius: 5px;
+	border: 1px solid #a8a7a7;
+	box-shadow: 11px 8px 17px -7px rgba(0, 0, 0, 0.30);
+
+	padding-top: 10px;
+	margin: 5px 0 0 15px;
+}
+
+.agent-status .agent-online{
+	background-color: #b0c86f;
+}
+
+.agent-status .agent-offline{
+	background-color: #ffa180;
+}
+
+.agent-status .agent-oncall{
+	background-color: #74bbfb;
+}
+
+.agent-status .agent-idle{
+	background-color: #fada5f;
+}
+
+
+
+
+
+
+
+/*....In/Outbound Graphs......*/
+	/*....Inbound Graph......*/
+.inbound-graph{
+	text-align: center;
+	float: left;
+	height: 335px;
+	width: 40%;
+	animation: fadein 0.4s;
+
+	margin: 10px 0 0 15px;
+}
+
+	/*....Outbound Graph......*/
+.outbound-graph{
+	display: none;
+	text-align: center;
+	float: left;
+	height: 335px;
+	width: 40%;
+	animation: fadein 0.4s;
+
+	margin: 10px 0 0 15px;
+}
+
+
+
+
+
+
+
+
+/*.........Company Info..........*/
+.company-info{
+	text-align: center;
+	float: left;
+	height: 335px;
+	width: 17%;
+
+	margin: 10px 0 0 10px;
+}
+
+.company-info div{
+	margin: 20px 5px;
+}
+.company-info div img{
+	height: 30px;
+}
+
+.company-info .additional-info{
+	height: 50%;
+	background-color: #fff5f5;
+	border: 1px solid #a8a7a7;
+	border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+/*.....Call Status......*/
+.call-status{
+	text-align: center;
+	float: left;
+	height: 395px;
+	width: 40%;
+
+	margin: -70px 0 0 10px;
+}
+
+.call-status .total, .total-talktime, .avg-talktime, .answered, .missed, .busy{
+	background-color: #e0d7d7;
+	text-align: center;
+	float: left;
+	height: 40%;
+	width: 30%;
+	border-radius: 5px;
+	box-shadow: 11px 8px 17px -7px rgba(0, 0, 0, 0.30);
+	border: 1px solid #a8a7a7;
+
+	padding-top: 30px;
+	margin: 5px 0 5px 15px;
+}
+
+.call-status i{
+	font-size: 30px;
+}
+
+/*............................*/
+.call-status .answered{
+	background-color: #b0c86f;
+}
+.call-status .answered i{
+	color: #7a9335;
+}
+
+/*............................*/
+.call-status .missed{
+	background-color: #ffa180;
+}
+
+/*............................*/
+.call-status .busy{
+	background-color: #ffb865;
+}
+.call-status .busy i{
+	color: #c27011;
+}
+
+
+
+
+
+/*....Agent Graphs......*/
+	/*....Inbound Agent Graph......*/
+.inagent-graph{
+	text-align: center;
+	float: left;
+	height: 315px;
+	width: 29%;
+	animation: fadein 0.4s;
+
+	margin: 10px 0 0 15px;
+}
+
+	/*...box that contains table...*/
+.inagent-graph .inagent-graph-table{
+	margin-top: 15px;
+	width: 100%;
+}
+
+	/*...the Agent graph table itself...*/
+.inagent-graph .inagent-graph-table table{
+	counter-reset: tableCount;
+	width: 100%;
+}
+		/*table data number*/
+		.counterCell:before {              
+		    content: counter(tableCount); 
+		    counter-increment: tableCount; 
+		}
+
+	/*...for th and td...*/
+.inagent-graph table thead th, tbody td{
+	text-align: center;
+	padding: 8px 0 11px 0;
+}
+
+.inagent-graph table tbody tr:hover{
+	background-color: #E0D7D7;
+	transition: 0.2s;
+}
+
+
+	/*....Outbound Agent Graph......*/
+.outagent-graph{
+	display: none;
+	text-align: center;
+	float: left;
+	height: 315px;
+	width: 29%;
+	animation: fadein 0.4s;
+
+	margin: 10px 0 0 15px;
+}
+
+	/*...box that contains table...*/
+.outagent-graph .outagent-graph-table{
+	margin-top: 15px;
+	width: 100%;
+}
+
+	/*...the Agent graph table itself...*/
+.outagent-graph .outagent-graph-table table{
+	counter-reset: tableCount;
+	width: 100%;
+}
+		/*table data number*/
+		.counterCell:before {              
+		    content: counter(tableCount); 
+		    counter-increment: tableCount; 
+		}
+
+	/*...for th and td...*/
+.outagent-graph table thead th, tbody td{
+	text-align: center;
+	padding: 8px 0 11px 0;
+}
+
+.outagent-graph table tbody tr:hover{
+	background-color: #E0D7D7;
+	transition: 0.2s;
+}
+@keyframes fadein{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+
+
+
+
+
+/*......Live Agents......*/
+.live-agents{
+	text-align: center;
+	float: left;
+	height: 315px;
+	width: 28%;
+
+	margin: 10px 0 0 10px;
+}
+
+/*...box that contains table...*/
+.live-agents .live-agents-table{
+	margin-top: 15px;
+	width: 100%;
+}
+
+	/*...the Agent graph table itself...*/
+.live-agents .live-agents-table table{
+	counter-reset: tableCount;
+	width: 100%;
+}
+		/*table data number*/
+		.counterCell:before {              
+		    content: counter(tableCount); 
+		    counter-increment: tableCount; 
+		}
+
+	/*...for th and td...*/
+.live-agents table thead th, tbody td{
+	text-align: center;
+	padding: 12px 0 11px 0;
+}
+
+.live-agents table tbody tr:hover{
+	background-color: #E0D7D7;
+	transition: 0.2s;
+}
+
+
+
+
+
+.live-agents, .inagent-graph, .outagent-graph, .call-status, .inbound-graph, .outbound-graph, .company-info, .agent-status{
+	background-color: white;
+	border: 1px solid #a8a7a7;
+	border-radius: 3px;
+	box-shadow: 10px 11px 22px -1px rgba(0, 0, 0, 0.20);
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////           Wallboard Page End            ////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////           Settings Page Start           ////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*.......Entire Settings Body........*/
+.settings-body{
+	margin-left: 62px;
+	animation: fadein 0.4s;
+}
+@keyframes fadein{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+/*......Settings header.......*/
+.settings-header{
+	color: #263649;
+	padding-left: 10px;
+}
+
+
+/*.......Settings Menu Box..........*/
+.settings-menu{
+	background-color: white;
+	height: 580px;
+	border: 1px solid #a8a7a7;
+	border-radius: 3px;
+	box-shadow: 10px 11px 22px -1px rgba(0, 0, 0, 0.20);
+
+	padding-top: 1px;
+	margin: 0 10px;
+}
+
+.settings-menu div{
+	height: 120px;
+	border-bottom: 1px solid #a8a7a7;
+
+	margin: 0 10px 28px 10px;
+}
+
+/*........Settings Icons Divs........*/
+.settings-menu div div{
+	float: left;
+	height: 85px;
+	width: 85px;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: 6px 2px 18px -4px rgba(0, 0, 0, 0.23);
+
+	padding-top: 15px;
+	margin-top: -3px;
+}
+
+.settings-menu div div i{
+	font-size: 25px;
+}
+
+.settings-menu div div:hover{
+	color: white;
+	box-shadow: 6px 2px 18px -4px rgba(0, 0, 0, 0.50);
+	transition: 0.4s;
+}
+
+
+/*.........Font Color and Hover For Individual Icon Divs.........*/
+	/*........Admin Tools - settings-contacts........*/
+.settings-menu div .settings-contacts{
+	color: #5ba7eb;
+	border: 1px solid #5ba7eb;
+}
+.settings-menu div .settings-contacts:hover{
+	background-color: #5ba7eb;
+}
+
+	/*........Admin Tools - settings-usermanagement........*/
+.settings-menu div .settings-usermanagement {
+	color: #258ce8;
+	border: 1px solid #258ce8;
+}
+.settings-menu div .settings-usermanagement:hover{
+	background-color: #258ce8;
+}
+
+	/*........Admin Tools - settings-scripts........*/
+.settings-menu div .settings-scripts{
+	color: #258ce8;
+	border: 1px solid #258ce8;
+}
+.settings-menu div .settings-scripts:hover{
+	background-color: #0069c7;
+}
+
+	/*........Admin Tools - settings-autodeleter........*/
+.settings-menu div .settings-autodeleter{
+	color: #014c8f;
+	border: 1px solid #014c8f;
+}
+.settings-menu div .settings-autodeleter:hover{
+	background-color: #014c8f;
+}
+
+
+
+	/*........Multi-Tenant Tools - settings-selectuser........*/
+.settings-menu div .settings-selectuser{
+	color: #f2b46d;
+	border: 1px solid #f2b46d;
+}
+.settings-menu div .settings-selectuser:hover{
+	background-color: #f2b46d;
+}
+
+	/*........Multi-Tenant Tools - settings-assignagents........*/
+.settings-menu div .settings-assignagents{
+	color: #eb7d34;
+	border: 1px solid #eb7d34;
+}
+.settings-menu div .settings-assignagents:hover{
+	background-color: #eb7d34;
+}
+
+
+	/*........Multi-Tenant Tools - settings-agents2scripts........*/
+.settings-menu div .settings-agents2scripts{
+	color: #bf5813;
+	border: 1px solid #bf5813;
+}
+.settings-menu div .settings-agents2scripts:hover{
+	background-color: #bf5813;
+}
+
+	/*........Multi-Tenant Tools - settings-assignqueue........*/
+.settings-menu div .settings-assignqueue{
+	color: #9e460b;
+	border: 1px solid #9e460b;
+}
+.settings-menu div .settings-assignqueue:hover{
+	background-color: #9e460b;
+}
+
+	/*........Multi-Tenant Tools - settings-agents2queue........*/
+.settings-menu div .settings-agents2queue{
+	color: #803808;
+	border: 1px solid #803808;
+}
+.settings-menu div .settings-agents2queue:hover{
+	background-color: #803808;
+}
+
+
+
+
+	/*........Time Management Tools - settings-breaktime........*/
+.settings-menu div .settings-breaktime{
+	color: #5cbd33;
+	border: 1px solid #5cbd33;
+}
+.settings-menu div .settings-breaktime:hover{
+	background-color: #5cbd33;
+}
+
+	/*........Multi-Tenant Tools - settings-wrapup........*/
+.settings-menu div .settings-wrapup{
+	color: #469126;
+	border: 1px solid #469126;
+}
+.settings-menu div .settings-wrapup:hover{
+	background-color: #469126;
+}
+
+	/*........Multi-Tenant Tools - settings-shift........*/
+.settings-menu div .settings-shift{
+	color: #31661a;
+	border: 1px solid #31661a;
+}
+.settings-menu div .settings-shift:hover{
+	background-color: #31661a;
+}
+
+
+
+	/*........E-mail Settings - settings-smtp........*/
+.settings-menu div .settings-smtp{
+	color: #a1564d;
+	border: 1px solid #a1564d;
+}
+.settings-menu div .settings-smtp:hover{
+	background-color: #a1564d;
+}
+
+	/*........E-mail Settings - settings-scheduler........*/
+.settings-menu div .settings-scheduler{
+	color: #c74536;
+	border: 1px solid #c74536;
+}
+.settings-menu div .settings-scheduler:hover{
+	background-color: #c74536;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////           Settings Page Start           ////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////*/

@@ -1,0 +1,2 @@
+<?php
+$classes=array('Pagination');
